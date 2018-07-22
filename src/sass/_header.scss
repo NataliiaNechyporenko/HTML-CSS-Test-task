@@ -1,0 +1,297 @@
+.header {
+  box-sizing: border-box;
+  color: $light-text;
+  padding: .75rem 10px 0;
+}
+
+.slider-img {
+  background-image: $gradient, url(./images/intro-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  max-height: 1000px;
+}
+
+.slider {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+
+  &-title {
+    margin: 1rem auto;
+
+    .short-description {
+        font-size: 1.5rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+
+      &:after {
+        background-color: $light-text;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: stretch;
+    list-style: none;
+    font-family: $elements-font;
+    width: 100%;
+
+    &-item {
+      border-top: 3px solid $light-text;
+      display: inline-block;
+      flex-grow: 1;
+      min-height: 25px;
+      margin-right: 10px;
+
+      &:hover {
+        border-top: 3px solid $nav-active-links;
+        color: $nav-active-links;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .slide-title {
+      display: none;
+    }
+  }
+}
+
+.top-nav-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.text-logo {
+  font-family: $title-font;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.navigation-wrapper {
+  display: none;
+  }
+
+.btn {
+  border: 3px solid $light-text;
+  background-color: transparent;
+  color: $light-text;
+  display: block;
+  font-family: $elements-font;
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 3px solid $nav-active-links;
+    color: $nav-active-links;
+  }
+}
+
+@media screen and (min-device-width: 960px) {
+  #toogle-menu-btn {
+    display: none;
+  }
+
+  .navigation-wrapper {
+    display: block;
+
+    .main-menu {
+      display: inline-block;
+  
+      ul {
+        list-style: none;
+  
+        li {
+          display: inline-block;
+          margin-right: 3.375rem;
+          padding: .5rem 0;
+  
+          &:hover {
+            border-bottom: 3px solid $nav-active-links;
+          }
+  
+          a {
+            color: $light-text;
+            font-family: $elements-font;
+            font-size: 0.875rem;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+      }
+  
+      .current_page_item {
+          border-bottom: 3px solid $nav-active-links;
+        a {
+          color: $nav-active-links;
+        }
+      }
+    }
+    .icon-btn {
+      background: transparent;
+      border: none;
+      display: inline-block;
+      margin-right: 2.625rem;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .slider {
+      .slide-title {
+        display: block;
+      }
+  }
+
+
+}
+
+@media screen and (min-device-width: 960px) and (max-device-width: 1367px) {
+  .header {
+    color: $light-text;
+    padding-top: 1rem;
+  }
+  
+  .slider-img {
+    background-image: $gradient, url(./images/intro-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    max-height: 1000px;
+  }
+  
+  .slider {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+  
+    &-title {
+      margin: 5rem auto;
+  
+      .short-description {
+          font-size: 2.5rem;
+      }
+    
+      .title {
+        font-size: 5rem;
+  
+        &:after {
+          background-color: $light-text;
+        }
+      }
+    }
+  
+    &-nav {
+      display: flex;
+      justify-content: stretch;
+      list-style: none;
+      font-family: $elements-font;
+      width: 100%;
+  
+      &-item {
+        display: inline-block;
+        flex-grow: 1;
+        margin-right: 30px;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  
+      .slide-number {
+        font-weight: 700;
+      }
+  
+      .slide-title {
+        text-transform: uppercase;
+        line-height: 4.375rem;
+      }
+    }
+  
+  }
+  
+  .btn {
+    border: 3px solid $light-text;
+    background-color: transparent;
+    color: $light-text;
+    display: block;
+    font-family: $elements-font;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+  }
+}
+
+#toogle-menu-btn {
+  height: 36px;
+  width: 36px;
+
+  img {
+    height: 36px;
+    max-width: 36px;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .slider {
+    &-title {
+      margin: 10rem auto;
+  
+      .short-description {
+          font-size: 4.5rem;
+      }
+    
+      .title {
+        font-size: 9.375rem;
+        }
+      }
+  
+    &-nav {
+      .slide-title {
+        line-height: 4.375rem;
+      }
+    }
+  }
+
+  .navigation-wrapper {
+  
+    .main-menu {
+  
+      ul {
+  
+        li {
+          margin-right: 3.375rem;
+          padding: .5rem 0;
+  
+          a {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+    .icon-btn {
+      margin-right: 2.625rem;
+    }
+  }
+  
+  .btn {
+    padding: 0.75rem 2rem;
+  }
+}

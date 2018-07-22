@@ -1,0 +1,215 @@
+.section {
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.title-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .short-description {
+    font-family: $title-description-font;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .title {
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: 1.875rem;
+    margin-top: .75rem;
+    margin-bottom: .5rem;
+    max-width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:after {
+      background-color: $secondary-color;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: .75rem auto;
+      width: 60px;
+      
+    }
+  }
+}
+
+.text {
+  font-family: $text-font;
+  color: $medium-text;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 1rem 1rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.tabs-img-wrapper {
+  box-sizing: border-box;
+  background-color: $main-theme-color;
+  margin: 2px;
+  max-width: 320px;
+  position: relative;
+
+  .tab-caption {
+    display: none;
+  }
+
+  .tab-caption--active {
+    background-image: $gradient;
+    color: $light-text;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+}
+
+.facts {
+  background-color: $main-theme-color;
+  color: $light-text;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100vw;
+
+  .fact-item {
+    border-bottom: 1px solid $light-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $light-text;
+    flex-grow: 1;
+    padding: 2rem;
+
+    .number {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 4rem;
+    }
+
+    .number-description {
+      font-family: $title-font;
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .service-item {
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    max-width: 320px;
+  }
+
+  .service-icon {
+    margin-right: 1rem;
+    min-height: 32px;
+    min-width: 32px;
+  }
+
+  .service-contant {
+    color: $medium-text;
+    font-family: $elements-font;
+  }
+
+  .service-title {
+    color: $dark-text;
+    font-family: $title-font;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .service-decription {
+    font-family: $text-font;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-device-width: 960px) {
+  .text {
+    margin-bottom: 3rem;
+  }
+  .facts-wrapper {
+    background-color: $main-theme-color;
+    min-width: 100vw;
+  }
+
+    .about, .services {
+      margin: 5.625rem auto;
+    }
+
+  .facts {
+  
+    .fact-item {
+      border-bottom: none;
+      border-right: 1px solid $light-text;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $light-text;
+      flex-grow: 1;
+      padding: 2rem;
+
+      &:first-child {
+        border-left: 1px solid $light-text;
+      }
+  
+      .number {
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: 4.5rem;
+      }
+  
+      .number-description {
+        font-family: $title-font;
+        font-size: .75rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .services-wrapper {
+    .service-item {
+      margin-bottom: 2.9rem;
+    }
+  }
+}
